@@ -33,3 +33,4 @@ class CSVCleaner:
 
     def get_clean_data(self):
         return self.data
+

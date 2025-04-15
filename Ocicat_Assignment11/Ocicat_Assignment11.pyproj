@@ -21,6 +21,10 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="anomalyPackage\anomaly.py" />
+    <Compile Include="anomalyPackage\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="apiPackage\api.py" />
     <Compile Include="apiPackage\__init__.py">
       <SubType>Code</SubType>
@@ -39,6 +43,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="anomalyPackage\" />
     <Folder Include="apiPackage\" />
     <Folder Include="cleanPackage\" />
     <Folder Include="mainPackage\" />

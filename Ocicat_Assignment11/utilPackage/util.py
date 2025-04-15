@@ -22,7 +22,7 @@ class CSVinput:
         @return list: the list of dictionaries from the file.
         '''
         csv_data = []
-        with open("./data/fuelPurchaseData.csv", newline='') as f:
+        with open("./Data/fuelPurchaseData.csv", newline='') as f:
             reader = csv.DictReader(f, delimiter=',')
             for row in reader:
                 csv_data.append(row)
