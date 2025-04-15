@@ -29,9 +29,6 @@
     <Compile Include="cleanPackage\__init__.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Data\__init__.py">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="mainPackage\__init__.py">
       <SubType>Code</SubType>
     </Compile>
@@ -40,8 +37,8 @@
   <ItemGroup>
     <Folder Include="apiPackage\" />
     <Folder Include="cleanPackage\" />
-    <Folder Include="Data\" />
     <Folder Include="mainPackage\" />
+    <Folder Include="Data\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
