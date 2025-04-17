@@ -26,17 +26,21 @@ from apiPackage.api import *
 
 if __name__ == "__main__":
     def main():
+        # Initialize the CSV input
         data = CSVinput.read_CSV_file()
+        # Initialize the CSV cleaner
         cleaner = CSVCleaner(data)
         cleaner.format_gross_price()
         cleaner.remove_duplicates()
+        # Initialize the Anomaly Detector
         anomaly_detector = AnomalyDetector(cleaner.get_clean_data())
         anomaly_detector.filter_pepsi_purchases()
         anomaly_detector.save_anomalies()
         almost_clean = anomaly_detector.get_clean_data()
+        # Initialize the API updater
         updater = ZipCodeAPI(almost_clean)
         updater.update_missing_zipcodes(almost_clean)
-       
+        # Initialize the CSV exporter
         export = CSVExporter
         CSVExporter.export_cleaned_data(almost_clean)
         

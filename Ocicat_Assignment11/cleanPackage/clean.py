@@ -8,7 +8,7 @@
 # Semester/Year:  Spring 2025
 # Brief Description of the assignment: This Assignment teaches us how to clean data, parse throught the results, and input into a seperate csv file
 # Brief Description of what this module does. This module takes the data from util.py and formats the data
-# Citations:
+# Citations: We used chatgpt
 import csv
 
 class CSVCleaner:

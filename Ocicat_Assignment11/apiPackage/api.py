@@ -8,7 +8,7 @@
 # Semester/Year:  Spring 2025
 # Brief Description of the assignment: This Assignment teaches us how to clean data, parse throught the results, and input into a seperate csv file
 # Brief Description of what this module does. This module uses the api to fill in the missing zip code for cities 
-# Citations:
+# Citations: We used chatgpt
 
 import requests
 
@@ -18,7 +18,7 @@ class ZipCodeAPI:
     """
 
     def __init__(self,data):
-        self.api_key = 'c11deba0-1b74-11f0-a1d7-bfeed43e07f4'  # Replace if needed
+        self.api_key = 'c11deba0-1b74-11f0-a1d7-bfeed43e07f4'  
         self.base_url = 'https://app.zipcodebase.com/api/v1/code/city'
         self.data = data
     def request_api_zipcode(self, city, state_name):
@@ -55,7 +55,7 @@ class ZipCodeAPI:
         if not full_address:
             return None, None
 
-        # Clean up spaces and split by commas
+        
         parts = [p.strip() for p in full_address.split(',')]
 
         # Handle more complex or misformatted addresses
@@ -95,16 +95,16 @@ class ZipCodeAPI:
         for row in data:
             if count >= max_rows:
                 updated_data.append(row)
-                continue  # still keep rest of the data as-is without ZIP update
+                continue 
 
-            if row.get("Zip", "").strip():  # Skip if Zip already exists
+            if row.get("Zip", "").strip():  
                 updated_data.append(row)
                 continue
 
             full_address = row.get("Full Address", "").strip()
             city, state = self.extract_city_state(full_address)
 
-            # Add this line to convert "OH" to "Ohio"
+            
             if state == "OH":
                 state = "Ohio"
 
