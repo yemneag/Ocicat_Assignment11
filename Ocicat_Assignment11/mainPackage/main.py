@@ -38,7 +38,7 @@ if __name__ == "__main__":
         updater.update_missing_zipcodes(almost_clean)
        
         export = CSVExporter
-        CSVExporter.export_cleaned_data(updater.get_clean_data())
+        CSVExporter.export_cleaned_data(almost_clean)
         
     main()
    
