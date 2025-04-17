@@ -33,6 +33,10 @@
     <Compile Include="cleanPackage\__init__.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="exportPackage\export.py" />
+    <Compile Include="exportPackage\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="mainPackage\__init__.py">
       <SubType>Code</SubType>
     </Compile>
@@ -46,6 +50,7 @@
     <Folder Include="anomalyPackage\" />
     <Folder Include="apiPackage\" />
     <Folder Include="cleanPackage\" />
+    <Folder Include="exportPackage\" />
     <Folder Include="mainPackage\" />
     <Folder Include="Data\" />
     <Folder Include="utilPackage\" />
