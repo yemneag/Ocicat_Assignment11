@@ -1,3 +1,14 @@
+# clean.py
+# File Name : clean.py
+# Student Name: Abel Yemaneab, Hailey Manuel
+# email: yemaneag@mail.uc.edu, manuehv@mail.uc.edu
+# Assignment Number: Assignment 11
+# Due Date:   04/17/2025
+# Course #/Section: IS 4010-001
+# Semester/Year:  Spring 2025
+# Brief Description of the assignment: This Assignment teaches us how to clean data, parse throught the results, and input into a seperate csv file
+# Brief Description of what this module does. This module takes the data from util.py and formats the data
+# Citations:
 import csv
 
 class CSVCleaner:
@@ -6,8 +17,7 @@ class CSVCleaner:
 
     def format_gross_price(self):
         """
-        Make sure the Gross Price column has exactly 2 decimal places.
-        Assumes Gross Price is in a column labeled 'Gross Price'.
+        Formats gross price to only have two decimal places.
         """
         cleaned_data = []
         for row in self.data:

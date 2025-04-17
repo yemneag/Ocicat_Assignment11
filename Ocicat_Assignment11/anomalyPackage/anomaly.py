@@ -1,18 +1,27 @@
+# anomaly.py
+# File Name : anomaly.py
+# Student Name: Abel Yemaneab, Hailey Manuel
+# email: yemaneag@mail.uc.edu, manuehv@mail.uc.edu
+# Assignment Number: Assignment 11
+# Due Date:   04/17/2025
+# Course #/Section: IS 4010-001
+# Semester/Year:  Spring 2025
+# Brief Description of the assignment: This Assignment teaches us how to clean data, parse throught the results, and input into a seperate csv file
+# Brief Description of what this module does. This module filters out anomalies from the data.
+# Citations:
 import csv
 import os
 
 class AnomalyDetector:
     def __init__(self, data):
-        """
-        Initializes with a list of dictionaries (rows of data).
-        """
+
         self.data = data
         self.anomalies = []
 
     def filter_pepsi_purchases(self):
         """
-        Removes rows where the Fuel Type contains 'pepsi'.
-        Saves these rows into the 'anomalies' list.
+        This def takes out all rows with pepsi in the Fuel Type column.
+        It stores the removed rows in the anomalies list.
         """
         clean_data = []
         for row in self.data:
@@ -25,7 +34,7 @@ class AnomalyDetector:
 
     def save_anomalies(self, filepath="./Data/dataAnomalies.csv"):
         """
-        Saves Pepsi rows to dataAnomalies.csv in the Data folder.
+        This def saves the anomalies to a CSV file.
         """
         if not self.anomalies:
             print("No anomalies found to save.")

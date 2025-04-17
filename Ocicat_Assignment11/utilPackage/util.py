@@ -7,8 +7,8 @@
 # Course #/Section: IS 4010-001
 # Semester/Year:  Spring 2025
 # Brief Description of the assignment: This Assignment teaches us how to clean data, parse throught the results, and input into a seperate csv file
-# Brief Description of what this module does. This module reads the cvs file
-# Citations: https://www.geeksforgeeks.org/convert-json-to-csv-in-python/, https://stackoverflow.com/questions/1871524/how-can-i-convert-json-to-csv
+# Brief Description of what this module does. This module reads the CSV file and returns a list of dictionaries.
+# Citations:
 
 
 import csv

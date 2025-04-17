@@ -1,11 +1,21 @@
 # main.py
-from anomalyPackage import anomaly
+# File Name : main.py
+# Student Name: Abel Yemaneab, Hailey Manuel
+# email: yemaneag@mail.uc.edu, manuehv@mail.uc.edu
+# Assignment Number: Assignment 11
+# Due Date:   04/17/2025
+# Course #/Section: IS 4010-001
+# Semester/Year:  Spring 2025
+# Brief Description of the assignment: This Assignment teaches us how to clean data, parse throught the results, and input into a seperate csv file
+# Brief Description of what this module does. This initializes and runs the program.
+# Citations:
 from cleanPackage.clean import *
 from exportPackage.export import CSVExporter
 from utilPackage.util import *
 from anomalyPackage.anomaly import *
 from apiPackage.api import ZipCodeAPI
-from exportPackage.export import CSVExporter
+from apiPackage.api import *
+
 
 # Extra Credit Documentation
 # Side ID's are right and left justified , and they randomly chnage between letters and numbers 
