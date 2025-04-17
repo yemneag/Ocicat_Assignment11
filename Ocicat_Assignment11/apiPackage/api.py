@@ -104,12 +104,17 @@ class ZipCodeAPI:
             full_address = row.get("Full Address", "").strip()
             city, state = self.extract_city_state(full_address)
 
+            # Add this line to convert "OH" to "Ohio"
+            if state == "OH":
+                state = "Ohio"
+
             if city and state:
                 zip_list = self.request_api_zipcode(city, state)
                 if zip_list:
                     row["Zip"] = zip_list[0]
                     print(f"Updated ZIP for {city}, {state}: {zip_list[0]}")
                 else:
+                    print(f" No ZIPs found for {city}, {state}")
                     row["Zip"] = ""
             else:
                 print(f"Could not extract city/state from: {full_address}")
@@ -117,6 +122,4 @@ class ZipCodeAPI:
 
             updated_data.append(row)
             count += 1
-            self.data = updated_data
-    def get_clean_data(self):
-        return self.data
+        self.data = updated_data
